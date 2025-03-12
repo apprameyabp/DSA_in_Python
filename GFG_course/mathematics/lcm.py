@@ -7,3 +7,4 @@ def gcd(a,b):
     return gcd(b,a%b)
 
 print(find_lcm(4,6))
+
