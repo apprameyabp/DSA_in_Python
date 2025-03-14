@@ -1,21 +1,23 @@
 import math
 def prime_factors(number):
+    found = False
     for i in range(2,int(math.sqrt(number))+1):
         if number%i == 0:
             if isPrime(i):
                 print(i)            
-                # print(number)
-        
+                found = True
+    if not found and isPrime(number):
+        print(number)   
+
 def isPrime(number):
     if number==1:
         return False
-    prime = True
 
     for i in range(2, math.floor(math.sqrt(number)+1)):
         if number%i == 0:
-            prime = False
-            break
-    return prime       
+            return False
 
-number = 13
+    return True       
+
+number = int(input("Enter a number"))
 prime_factors(number)
