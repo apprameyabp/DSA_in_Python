@@ -5,18 +5,15 @@ def max_even_min_odd(arr):
     n = len(arr)
     max_even = None
     min_odd = None
-    for i in range(n-1, -1, -1):
-        if arr[i] % 2 == 0:
-            if arr[i]>max_even :
-                max_even = arr[i]
-                # max_even_ans = max(ans,)
-        elif arr[i] % 2 != 0:
-            if arr[i] < min_odd :
-                min_odd = arr[i]
+    for num in arr:
+        if num % 2 == 0:
+            if max_even is None or num>max_even:
+                max_even = num
         else:
-            pass
+            if min_odd is None or num<min_odd:
+                min_odd = num
     return max_even , min_odd
 
-arr = [10,1,8,87,92,101,1,67,78]
-
+arr = [10,-1,8,87,-92,101,1,-67,78]
+arr = [-1,-2,-3,-4,-5,-6,-7]
 print(max_even_min_odd(arr))
