@@ -1,15 +1,10 @@
 def immediate_greater(arr,x):
     greater = max(arr)
-    next_greater = None
+    next_greater = float('-inf')
 
-    for num in arr:
-        if num<=greater or num is not None:
-                next_greater = num
-                if next_greater<greater:
-                    next_greater = num
-                elif next_greater == greater:
-                     next_greater = num
-    return next_greater
+    for i in range(n):
+        # if num>=greater:
+            pass
 
 arr = [4,67,13,12,15]
 x = 16
